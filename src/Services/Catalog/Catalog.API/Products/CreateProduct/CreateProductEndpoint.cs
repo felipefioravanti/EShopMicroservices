@@ -18,7 +18,7 @@ namespace Catalog.API.Products.CreateProduct
                 // map the incoming request to create product command object
                 var command = request.Adapt<CreateProductCommand>();
 
-                // send object throught mediator
+                // send object through mediator
                 var result = await sender.Send(command);
 
                 // map back the result
